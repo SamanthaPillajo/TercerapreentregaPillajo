@@ -1,0 +1,23 @@
+{% extends 'miaplicacion/inicio.html' %}
+{% load static %}
+
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Madre</title>
+</head>
+<body>
+    <h2>Nueva madre</h2>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+{% endblock contenido %}
